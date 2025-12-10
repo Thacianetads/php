@@ -18,6 +18,7 @@
                 <th>Nome</th>
                 <th>Telefone</th>
                 <th>Descrição</th>
+                <th>Ação</th>
         </tr>
         <?php foreach($busca as $i){?>
             <tr>
@@ -25,6 +26,12 @@
                 <td><?= $i[1] ?></td>
                 <td><?= $i[2] ?></td>
                 <td><?= $i[3] ?></td>
+                <td><a href="altera.php?id=<?= $i[0] ?>">
+                    <img src="alterar.png" alt="altera" width="4%" height="4%"></a> 
+                    <a href="javascript:func()" onclick="confirmacao(
+                    '<?php print $id; ?>','<?php print $nome; ?>')">
+                    <img src="excluir.png" alt="exclui"width="4%" height="4%"></a>
+                </td>
             </tr>
         <?php } ?>
     </table>
